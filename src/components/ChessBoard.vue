@@ -12,23 +12,33 @@
 
 <script setup>
 
-let pieces = [
+import { ref, onMounted } from "vue"
+import { useChessBoard } from "../composables/useChessBoard";
+const { makeSelection, setupNewGame } = useChessBoard();
+
+onMounted(() => {
+	setupNewGame(updateBoard);
+})
+
+
+const pieces = ref([
 	["BRook", "BKnight", "BBishop", "BQueen", "BKing", "BBishop", "BKnight", "BRook"],
 	["BPawn", "BPawn", "BPawn", "BPawn", "BPawn", "BPawn", "BPawn", "BPawn"],
 	...Array(4).fill(Array(8).fill(null)),
 	["WPawn", "WPawn", "WPawn", "WPawn", "WPawn", "WPawn", "WPawn", "WPawn"],
 	["WRook", "WKnight", "WBishop", "WQueen", "WKing", "WBishop", "WKnight", "WRook"]
-];
+]);
+
 function getSquareColor(row, col) {
 	return (row + col) % 2 === 0 ? 'light-square' : 'dark-square';
 }
 
-function makeSelection(row, width) {
-
+function handleSquareClick(row, column) {
+	makeSelection(row, column, updateBoard);
 }
 
-function updateBoard() {
-
+function updateBoard(newPieces) {
+	pieces.value = newPieces
 }
 
 </script>
@@ -37,7 +47,7 @@ function updateBoard() {
 .chessboard {
 	display: grid;
 	grid-template-rows: repeat(8, 1fr);
-	width: 90%;
+	width: 100%;
 	aspect-ratio: 1 / 1;
 	border: 2px solid black;
 }

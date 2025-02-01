@@ -18,7 +18,7 @@
 		</div>
 		<div class="mx-5">
 			<div class="flex-container my-5">
-				<div class="card-shadow mr-2 my-2 px-5 py-4 card-half">
+				<div class="card-shadow mr-2 my-2 px-7 py-5 card-half">
 					<h2 class="h2">Who am I?</h2>
 					<p>
 						I'm a progammer and mathematician working on a joint
@@ -42,9 +42,11 @@
 						questionably high at my table :].<br />
 					</p>
 				</div>
-				<div class="card-shadow card-half ml-2 my-2 px-5 py-4">
-					<h2 class="h2">How about a game of chess?</h2>
-					<chessBoard />
+				<div class="card-shadow card-half ml-2 my-2 px-7 py-5">
+					<div class="mx-auto" style="width: 100%">
+						<h2 class="h2">How about a game of chess?</h2>
+						<chessBoard />
+					</div>
 				</div>
 			</div>
 			<div class="card-shadow card px-5 py-2">
