@@ -9,12 +9,7 @@
 
 	<div style="width: 90%; margin: auto">
 		<div class="card-shadow card px-5 py-2" style="display: flex">
-			<img
-				src="./assets/avatar.png"
-				alt="Description of avatar"
-				class="my-2 mr-4"
-				style="width: 15%"
-			/>
+			<img src="./assets/avatar.png" alt="Description of avatar" class="my-2 mr-4" style="width: 15%" />
 			<div>
 				<h1 class="h1">Hi! I'm Tomio Nagano!</h1>
 				<h2 class="h2">He/Him</h2>
@@ -48,15 +43,8 @@
 					</p>
 				</div>
 				<div class="card-shadow card-half ml-2 my-2 px-5 py-4">
-					<h2 class="h2">Enjoy a quote of the day:</h2>
-					<p class="mt-5">
-						"Le comte ne vient-il pas de nous dire que l'humaine
-						sagesse était tout entière dans ces deux mots: Attendre
-						et Espérer!"
-					</p>
-					<p class="mb-10 mt-2 ml-3">
-						- Alexandre Dumas, Le comte de Monte Cristo
-					</p>
+					<h2 class="h2">How about a game of chess?</h2>
+					<chessBoard />
 				</div>
 			</div>
 			<div class="card-shadow card px-5 py-2">
@@ -75,7 +63,7 @@
 	<div class="footer card-shadow"></div>
 </template>
 
-<script>
+<script setup>
 import chessBoard from "./components/ChessBoard.vue";
 </script>
 
