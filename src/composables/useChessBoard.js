@@ -1,24 +1,33 @@
 import { ref } from "vue";
+import axios from "axios";
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT;
 
 export function useChessBoard() {
 	async function startNewGame(callback) {
-		const endpoint = process.env.API_ENDPOINT + "startGame";
+		const endpoint = "//localhost:10000/" + "startGame";
+		console.log("sedning request to:", endpoint);
 		const response = await axios.get(endpoint);
 		console.log("Server response:", response.data);
-		callback();
+		callback("success");
 	}
 
 	async function makeSelection(row, column, callback) {
 		try {
-			const endpoint = process.env.API_ENDPOINT + "handleSelection";
+			const endpoint =
+				import.meta.env.VITE_APP_API_ENDPOINT + "handleSelection";
+			console.log("sedoning to:", endpoint);
 			const response = await axios.post(endpoint, {
 				coordinates: [row, column],
 			});
 			console.log("Server response:", response.data);
-			callback(respnce.data);
+			if (response.data.highlight) {
+				callback(true, respnce.data.highlight);
+			} else if (responce.data.board) {
+				callback(false, respnce.data.board);
+			}
 		} catch (error) {
 			console.error(
-				"Error setting up game:",
+				"Error making selection:",
 				error.response?.data || error.message,
 			);
 			alert("Failed to setup game.");

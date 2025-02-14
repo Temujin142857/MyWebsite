@@ -3,7 +3,7 @@
 		<div v-for="(row, rowIndex) in pieces" :key="rowIndex" class="chess-row">
 			<div v-for="(piece, colIndex) in row" :key="colIndex"
 				:class="['chess-square', getSquareColor(rowIndex, colIndex)]"
-				@onClick="makeSelection(rowIndex, colIndex)">
+				@onClick="handleSquareClick(rowIndex, colIndex)">
 				<img v-if="piece" :src="`/assets/${piece}.png`" class="piece" :alt=piece />
 			</div>
 		</div>
@@ -14,10 +14,10 @@
 
 import { ref, onMounted } from "vue"
 import { useChessBoard } from "../composables/useChessBoard";
-const { makeSelection, setupNewGame } = useChessBoard();
+const { makeSelection, startNewGame } = useChessBoard();
 
 onMounted(() => {
-	setupNewGame(updateBoard);
+	startNewGame(updateBoard);
 })
 
 
@@ -34,11 +34,21 @@ function getSquareColor(row, col) {
 }
 
 function handleSquareClick(row, column) {
+	console.log("clicked")
 	makeSelection(row, column, updateBoard);
 }
 
-function updateBoard(newPieces) {
-	pieces.value = newPieces
+function updateBoard(highlight, newData) {
+	if (highlight === "success") {
+		console.log("board is setup")
+	}
+	if (highlight === true) {
+
+	} else if (highlight === false) {
+		pieces.value = newData;
+		console.log(pieces.value)
+	}
+
 }
 
 </script>
