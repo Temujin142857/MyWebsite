@@ -9,7 +9,7 @@
 
 	<div style="width: 90%; margin: auto">
 		<div class="card-shadow card px-5 py-2" style="display: flex">
-			<img src="./assets/avatar.png" alt="Description of avatar" class="my-2 mr-4" style="width: 15%" />
+			<img src="/assets/avatar.png" alt="Description of avatar" class="my-2 mr-4" style="width: 15%" />
 			<div>
 				<h1 class="h1">Hi! I'm Tomio Nagano!</h1>
 				<h2 class="h2">He/Him</h2>
