@@ -3,8 +3,8 @@
 		<div v-for="(row, rowIndex) in pieces" :key="rowIndex" class="chess-row">
 			<div v-for="(piece, colIndex) in row" :key="colIndex"
 				:class="['chess-square', getSquareColor(rowIndex, colIndex)]"
-				@onClick="handleSquareClick(rowIndex, colIndex)">
-				<img v-if="piece" :src="`/assets/${piece}.png`" class="piece" :alt=piece />
+				@click="handleSquareClick(rowIndex, colIndex)">
+				<img v-if="piece && piece != 'EMPTY'" :src="`/assets/${piece}.png`" class="piece" :alt=piece />
 			</div>
 		</div>
 	</div>
@@ -20,6 +20,8 @@ onMounted(() => {
 	startNewGame(updateBoard);
 })
 
+const playingVSEngine = ref(true);
+const whiteOnTop = ref(false);
 
 const pieces = ref([
 	["BRook", "BKnight", "BBishop", "BQueen", "BKing", "BBishop", "BKnight", "BRook"],
@@ -35,7 +37,7 @@ function getSquareColor(row, col) {
 
 function handleSquareClick(row, column) {
 	console.log("clicked")
-	makeSelection(row, column, updateBoard);
+	makeSelection(row, column, updateBoard, playingVSEngine.value);
 }
 
 function updateBoard(highlight, newData) {
