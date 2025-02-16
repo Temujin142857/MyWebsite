@@ -27,21 +27,23 @@ export function useChessBoard() {
 			console.log("Server response:", response.data);
 			if (response.data.highlight) {
 				let coordinates = [
-					response.data.highlight[0],
-					response.data.highlight[2],
+					Number(response.data.highlight[0]),
+					Number(response.data.highlight[2]),
 				];
 				callback(
-					true,
+					"highlight square",
 					transformSingleCoordinateFromAPIToClient(coordinates),
 				);
 			} else if (response.data.board) {
 				callback(
-					false,
+					"update board",
 					transformBoardFromAPIToClient(response.data.board),
 				);
 				if (gameVSEngine) {
 					getEngineMove(callback);
 				}
+			} else if (response.data.result === "illegal move") {
+				callback("reset highlight");
 			}
 		} catch (error) {
 			console.error(

@@ -2,7 +2,7 @@
 	<div class="chessboard">
 		<div v-for="(row, rowIndex) in pieces" :key="rowIndex" class="chess-row">
 			<div v-for="(piece, colIndex) in row" :key="colIndex"
-				:class="['chess-square', getSquareColor(rowIndex, colIndex)]"
+				:class="['chess-square', getSquareColor(rowIndex, colIndex), getHighlightedSquare(rowIndex, colIndex)]"
 				@click="handleSquareClick(rowIndex, colIndex)">
 				<img v-if="piece && piece != 'EMPTY'" :src="`/assets/${piece}.png`" class="piece" :alt=piece />
 			</div>
@@ -22,6 +22,7 @@ onMounted(() => {
 
 const playingVSEngine = ref(true);
 const whiteOnTop = ref(false);
+const highlightedSquare = ref([-1, -1]);
 
 const pieces = ref([
 	["BRook", "BKnight", "BBishop", "BQueen", "BKing", "BBishop", "BKnight", "BRook"],
@@ -32,25 +33,35 @@ const pieces = ref([
 ]);
 
 function getSquareColor(row, col) {
-	return (row + col) % 2 === 0 ? 'light-square' : 'dark-square';
+	return (row + col) % 2 === 0 ? "light-square" : "dark-square";
 }
 
 function handleSquareClick(row, column) {
-	console.log("clicked")
 	makeSelection(row, column, updateBoard, playingVSEngine.value);
 }
 
-function updateBoard(highlight, newData) {
-	if (highlight === "success") {
-		console.log("board is setup")
+function updateBoard(instructions, newData) {
+	if (instructions === "success") {
+		console.log("board is setup");
 	}
-	if (highlight === true) {
-
-	} else if (highlight === false) {
+	if (instructions === "highlight square") {
+		highlightedSquare.value = newData;
+	} else if (instructions === "update board") {
 		pieces.value = newData;
-		console.log(pieces.value)
+		resetHighlightedSquare();
+	} else if (instructions === "reset highlight") {
+		resetHighlightedSquare();
 	}
+}
 
+function getHighlightedSquare(row, column) {
+	if (row === highlightedSquare.value[0] && column === highlightedSquare.value[1]) {
+		return "highlight";
+	}
+}
+
+function resetHighlightedSquare() {
+	highlightedSquare.value = [-1, -1];
 }
 
 </script>
@@ -88,5 +99,11 @@ function updateBoard(highlight, newData) {
 .piece {
 	width: 80%;
 	height: 80%;
+}
+
+.highlight {
+	border-style: inset;
+	border-width: 3px;
+	border-color: yellow;
 }
 </style>
