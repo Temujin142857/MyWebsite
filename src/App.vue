@@ -9,12 +9,22 @@
 
 	<div style="width: 90%; margin: auto">
 		<div class="card-shadow card px-5 py-2" style="display: flex">
-			<img src="/assets/avatar.png" alt="Description of avatar" class="my-2 mr-4" style="width: 15%" />
+			<div style="width: 15%">
+				<img src="/assets/avatar.png" alt="Description of avatar" class="mr-4"  />
+				<p class="mb-2 ml-5">art by @mostefai</p>
+			</div>
 			<div>
 				<h1 class="h1">Hi! I'm Tomio Nagano!</h1>
 				<h2 class="h2">He/Him</h2>
 				<h3 class="h3">University student by day, and also by night</h3>
+				<h3 class="h3">This website is still a work in progress, got the chessboard mostly working though :]</h3>
+				<p><a class="link" href="https://github.com/Temujin142857" target="_blank">Github</a>, 
+					<a class="link" href="https://www.instagram.com/yourusername/" target="_blank">Instagram</a>,
+					<a class="link" href="https://www.linkedin.com/in/tomio-nagano-5a2665235/" target="_blank">Linkedin</a>
+
+				</p>					
 			</div>
+			<!-- add my resume, but only if they have a link with the token -->
 		</div>
 		<div class="mx-5">
 			<div class="flex-container my-5">
@@ -50,7 +60,26 @@
 				</div>
 			</div>
 			<div class="card-shadow card px-5 py-2">
-				<h2 class="h2">My Projects</h2>
+				<h2 class="h2 mb-5">My Projects</h2>
+				<div class="project-card">
+					<div style="display: flex"></div>
+					<!--<img src="project1.png" alt="image for my first project">-->
+					<div>
+						<h3 class="h3">Chess Engine</h3>
+						<p>I made a chess board and engine in Java. It's pretty good, I'd say around 1800 elo. 
+							To determine it's move it used a minmax search with Alpha-beta pruning.<sup class="link"><a href="https://en.wikipedia.org/wiki/Alpha–beta_pruning" target="_blank">1</a></sup>
+
+						</p>
+					</div>
+				</div>
+				<div class="project-card">
+					<div style="display: flex"></div>
+					<!--<img src="project1.png" alt="image for my first project">-->
+					<div>
+						<h3 class="h3">Project name</h3>
+						<p>project description</p>
+					</div>
+				</div>
 				<div class="project-card">
 					<div style="display: flex"></div>
 					<!--<img src="project1.png" alt="image for my first project">-->
@@ -67,6 +96,7 @@
 
 <script setup>
 import chessBoard from "./components/ChessBoard.vue";
+//add some code to verify the token to maybe return my resume, email, and phone
 </script>
 
 <style></style>
