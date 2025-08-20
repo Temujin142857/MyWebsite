@@ -65,7 +65,7 @@
 					<div style="display: flex"></div>
 					<!--<img src="project1.png" alt="image for my first project">-->
 					<div>
-						<h3 class="h3">Chess Engine</h3>
+						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/Chess_Engine" target="_blank">Chess Engine</a></h3>
 						<p>I made a chess board and engine in Java. It's pretty good, I'd say around 1800 elo. 
 							To determine it's move it used a minmax search with Alpha-beta pruning.<sup class="link"><a href="https://en.wikipedia.org/wiki/Alpha–beta_pruning" target="_blank">1</a></sup>
 
@@ -76,7 +76,7 @@
 					<div style="display: flex"></div>
 					<!--<img src="project1.png" alt="image for my first project">-->
 					<div>
-						<h3 class="h3">Project name</h3>
+						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/MyWebsite" target="_blank">This Website</a> </h3>
 						<p>project description</p>
 					</div>
 				</div>
@@ -84,10 +84,19 @@
 					<div style="display: flex"></div>
 					<!--<img src="project1.png" alt="image for my first project">-->
 					<div>
-						<h3 class="h3">Project name</h3>
+						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/DraftDex" target="_blank">DraftDex</a></h3>
 						<p>project description</p>
 					</div>
 				</div>
+				<div class="project-card">
+					<div style="display: flex"></div>
+					<!--<img src="project1.png" alt="image for my first project">-->
+					<div>
+						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/RatsInARoom" target="_blank">RatsInARoom</a></h3>
+						<p>project description</p>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>

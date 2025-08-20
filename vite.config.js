@@ -8,4 +8,7 @@ export default defineConfig({
 		"process.env": process.env,
 	},
 	plugins: [vue(), tailwindcss()],
+	server:{
+		allowedHosts: ["tomionagano.ca"]
+	}
 });
