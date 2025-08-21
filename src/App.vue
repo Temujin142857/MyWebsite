@@ -1,17 +1,17 @@
 <template>
 	<div class="card-shadow header px-5 py-2 mb-5">
 		<ul class="ul">
-			<li class="li">About me</li>
-			<li class="li">My Projects</li>
+			<li class="li"><a href="#about-me">About me</a></li>
+			<li class="li"><a href="#projects">My Projects</a></li>
 			<li class="li">FAQs</li>
 		</ul>
 	</div>
 
 	<div style="width: 90%; margin: auto">
-		<div class="card-shadow card px-5 py-2" style="display: flex">
+		<div class="card-shadow card px-5 py-2" id="about-me" style="display: flex">
 			<div style="width: 15%">
 				<img src="/assets/avatar.png" alt="Description of avatar" class="mr-4"  />
-				<p class="mb-2 ml-5">art by @mostefai</p>
+				<p class="mb-2 ml-8">art by @mostefai</p>
 			</div>
 			<div>
 				<h1 class="h1">Hi! I'm Tomio Nagano!</h1>
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 			<div class="card-shadow card px-5 py-2">
-				<h2 class="h2 mb-5">My Projects</h2>
+				<h2 class="h2 mb-5" id="projects">My Projects</h2>
 				<div class="project-card">
 					<div style="display: flex"></div>
 					<!--<img src="project1.png" alt="image for my first project">-->
