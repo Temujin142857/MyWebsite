@@ -60,19 +60,19 @@ body {
 }
 
 .h1 {
-	font-size: 2.25rem; /* Tailwind's 4xl size */
-	font-weight: 700; /* Bold */
-	margin-bottom: 0.5rem; /* mb-2 */
+	font-size: 2.25rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem; 
 }
 
 .h2 {
-	font-size: 1.5rem; /* Tailwind's 2xl size */
-	font-weight: 600; /* Semi-bold */
+	font-size: 1.5rem; 
+	font-weight: 600; 
 }
 
 .h3 {
-	font-size: 1.125rem; /* Tailwind's lg size */
-	font-weight: 400; /* Normal weight */
+	font-size: 1.125rem;
+	font-weight: 400; 
 }
 
 .ul {

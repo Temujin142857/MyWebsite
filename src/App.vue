@@ -8,20 +8,19 @@
 	</div>
 
 	<div style="width: 90%; margin: auto">
-		<div class="card-shadow card px-5 py-2" id="about-me" style="display: flex">
+		<div class="card-shadow card px-5 py-2" style="display: flex">
 			<div style="width: 15%">
 				<img src="/assets/avatar.png" alt="Description of avatar" class="mr-4"  />
 				<p class="mb-2 ml-8">art by @mostefai</p>
 			</div>
 			<div>
-				<h1 class="h1">Hi! I'm Tomio Nagano!</h1>
+				<h1 class="h1" id="about-me">Hi! I'm Tomio Nagano!</h1>
 				<h2 class="h2">He/Him</h2>
 				<h3 class="h3">University student by day, and also by night</h3>
 				<h3 class="h3">This website is still a work in progress, got the chessboard mostly working though :]</h3>
 				<p><a class="link" href="https://github.com/Temujin142857" target="_blank">Github</a>, 
 					<a class="link" href="https://www.instagram.com/yourusername/" target="_blank">Instagram</a>,
 					<a class="link" href="https://www.linkedin.com/in/tomio-nagano-5a2665235/" target="_blank">Linkedin</a>
-
 				</p>					
 			</div>
 			<!-- add my resume, but only if they have a link with the token -->
@@ -60,7 +59,8 @@
 				</div>
 			</div>
 			<div class="card-shadow card px-5 py-2">
-				<h2 class="h2 mb-5" id="projects">My Projects</h2>
+				<h2 class="h2" id="projects">My Projects</h2>
+				<p class="mb-5">These are my personnel projects, projects made for school can be found on my github</p>
 				<div class="project-card">
 					<div style="display: flex"></div>
 					<!--<img src="project1.png" alt="image for my first project">-->
