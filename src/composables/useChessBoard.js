@@ -58,7 +58,7 @@ export function useChessBoard() {
 		const endpoint = apiEndpoint + "getEngineMove";
 		const response = await axios.get(endpoint);
 		console.log("Server response:", response.data);
-		callback(false, transformBoardFromAPIToClient(response.data.board));
+		callback("update board", transformBoardFromAPIToClient(response.data.board));
 	}
 
 	async function resetBoard(callback) {
