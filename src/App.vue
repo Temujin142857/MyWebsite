@@ -113,7 +113,12 @@
 					<!--<img src="project1.png" alt="image for my first project">-->
 					<div>
 						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/RatsInARoom" target="_blank">RatsInARoom</a></h3>
-						<p>project description</p>
+						<p>This one is still a work in progress, but it's the one I'm the most proud of already.
+							I won't say too much yet but it's going to be good!
+							<br/>
+							This is an ESOLang (esotaric language) based on the "crazy? I was crazy once" copy pasta.
+							It will be what I'm calling the first Rat Orients Programmling language haha.
+						</p>
 					</div>
 				</div>
 
