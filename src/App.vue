@@ -68,7 +68,10 @@
 						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/Chess_Engine" target="_blank">Chess Engine</a></h3>
 						<p>I made a chess board and engine in Java. It's pretty good, I'd say around 1800 elo. 
 							To determine it's move it used a minmax search with Alpha-beta pruning.<sup class="link"><a href="https://en.wikipedia.org/wiki/Alpha–beta_pruning" target="_blank">1</a></sup>
-
+							<br />
+							Just for fun I decided to write the evaluation algorithm myself with my somewhat decent chess knowledge.
+							That's probably the main reason it's only 1800 elo, since the weights it uses to determine the strength of a given position
+							were decided on vibe.
 						</p>
 					</div>
 				</div>
@@ -77,7 +80,12 @@
 					<!--<img src="project1.png" alt="image for my first project">-->
 					<div>
 						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/MyWebsite" target="_blank">This Website</a> </h3>
-						<p>project description</p>
+						<p>This website was made to serve as an introduction to myself, and to showcase some of my projects.
+							I'm well known for doing things the hard way and taking on unnecesary challenges, so I thought instead of 
+							just linking my projects I'd try to build some of them into the site.<br/>
+							The chess engine is the first that I've succeeded on. I made a headless version of the engine and a chess board in vue.js.<br/>
+							From there I set up an api which can run the headless app and pass commands from the UI to the engine.
+						</p>
 					</div>
 				</div>
 				<div class="project-card">
@@ -85,7 +93,17 @@
 					<!--<img src="project1.png" alt="image for my first project">-->
 					<div>
 						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/DraftDex" target="_blank">DraftDex</a></h3>
-						<p>project description</p>
+						<p>This is a fun one! It's a website I made for teambuilding in Pokemon Draft Leagues. A Pokemon Draft League is pretty much a tournament
+							where at the start everyone drafts a roster of 12 pokemon, and then uses it to make a team of 6 for each round of the tournament.
+							I used to use a teambuilder and a damage calculator each in theor own tab when teambuilding for a draft league, and this website is the two combined into one page.
+							<br />
+							You can find the website here: <a class="link" href="https://draftdex.ca" target="_blank">DraftDex</a>. 
+							<br />
+							I wrote it in React, so I could use the frontend as a submition for a class project, but I generally prefer Vue.js. 
+							It's a very fat client architecture, where everything takes place in the clients browser, even the database calls.
+							I know that's generally bad form, but it's not like there's anything sensitive in the database, and I'm running it and this website
+							on the same old laptop with 8gb of ram.
+						</p>
 					</div>
 				</div>
 				<div class="project-card">
