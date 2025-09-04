@@ -60,7 +60,9 @@
 			</div>
 			<div class="card-shadow card px-5 py-2">
 				<h2 class="h2" id="projects">My Projects</h2>
-				<p class="mb-5">These are my personnel projects, projects made for school can be found on my github</p>
+				<p class="mb-5">These are my favourite personnel projects, my other projects and projects made for school can be found on my github.
+
+				</p>
 				<div class="project-card">
 					<div style="display: flex"></div>
 					<!--<img src="project1.png" alt="image for my first project">-->
