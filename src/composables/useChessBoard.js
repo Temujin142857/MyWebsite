@@ -4,7 +4,7 @@ const apiEndpoint = import.meta.env.VITE_APP_API_ENDPOINT;
 
 export function useChessBoard() {
 	async function startNewGame(callback) {
-		const endpoint = "//localhost:10000/" + "startGame";
+		const endpoint = apiEndpoint + "startGame";
 		console.log("sedning request to:", endpoint);
 		const response = await axios.get(endpoint);
 		console.log("Server response:", response.data);
