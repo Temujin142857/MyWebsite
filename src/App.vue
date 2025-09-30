@@ -54,6 +54,7 @@
 				<div class="card-shadow card-half ml-2 my-2 px-7 py-5">
 					<div class="mx-auto" style="width: 100%">
 						<h2 class="h2">How about a game of chess?</h2>
+						<p>It's a little buggy, and I didn't implement promoting pawns in this online interface. The local version in the projects system is more robust.</p>
 						<chessBoard />
 					</div>
 				</div>
@@ -68,7 +69,8 @@
 					<!--<img src="project1.png" alt="image for my first project">-->
 					<div>
 						<h3 class="h3"><a class="link" href="https://github.com/Temujin142857/Chess_Engine" target="_blank">Chess Engine</a></h3>
-						<p>I made a chess board and engine in Java. It's pretty good, I'd say around 1800 elo. 
+						<p>I made a chess board and engine in Java. It's pretty good, I'd say around 1800 elo when I run it on my main computer. The online version in this website
+							is hosted on a laptop with 2gb of ram and a barely working cpu, so it's quite a lot weaker than when it's run locally.
 							To determine it's move it used a minmax search with Alpha-beta pruning.<sup class="link"><a href="https://en.wikipedia.org/wiki/Alpha–beta_pruning" target="_blank">1</a></sup>
 							<br />
 							Just for fun I decided to write the evaluation algorithm myself with my somewhat decent chess knowledge.
