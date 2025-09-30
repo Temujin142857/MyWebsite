@@ -54,7 +54,7 @@
 				<div class="card-shadow card-half ml-2 my-2 px-7 py-5">
 					<div class="mx-auto" style="width: 100%">
 						<h2 class="h2">How about a game of chess?</h2>
-						<p>It's a little buggy, and I didn't implement promoting pawns in this online interface. The local version in the projects system is more robust.</p>
+						<p>It's a little buggy, and I didn't implement promoting pawns in this online interface. The local version in the projects section is more robust.</p>
 						<chessBoard />
 					</div>
 				</div>
