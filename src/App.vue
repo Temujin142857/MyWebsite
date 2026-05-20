@@ -62,10 +62,9 @@
 						telling to the buttery smooth movement system, to it's
 						healthy monotisation model. Would highly recommend it,
 						one of the best free to play games ever made.<br /><br />
-						I also run a few DnD campaigns each year. I've been
-						DM-ing for 7 years now and I'd say I'm getting the hang
-						of it, although the character mortality rate remains
-						fairly high at my table :].<br />
+						I also write/run a few DnD campaigns each year. I've been
+						DM-ing for 9 years now and I love coming up with new harrowing 
+						situations to toss my players into. :]<br />
 					</p>
 				</div>
 				<div class="card-shadow card-half ml-2 my-2 px-7 py-5">
